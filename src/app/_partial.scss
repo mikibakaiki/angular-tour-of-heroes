@@ -1,0 +1,16 @@
+$colors: (
+  primary: #005dff,
+  primary-light: lighten(#005dff, 40%),
+  primary-dark: darken(#005dff, 40%),
+  accent: #fff6bb,
+  madder-lake: #cc2936,
+  dark-lava: #493b2a,
+  dark-lava-light: lighten(#493b2a, 40%),
+  dark-lava-darker: darken(#493b2a, 40%),
+  pale-cerulean: #a5c4d4,
+  bright-orange: #ffa500,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

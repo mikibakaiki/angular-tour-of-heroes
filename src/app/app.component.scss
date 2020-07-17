@@ -1,29 +1,43 @@
-/* AppComponent's private CSS styles */
+@use "partial";
+
+$margin: 10px;
+$padding: 10px;
 h1 {
-    font-size: 1.2em;
-    margin-bottom: 0;
+  font-size: 2em;
+  margin-bottom: $margin * 2;
+  text-align: center;
 }
-h2 {
-    font-size: 2em;
-    margin-top: 0;
-    padding-top: 0;
-}
-nav a {
-    padding: 5px 10px;
-    text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
-    background-color: #eee;
-    border-radius: 4px;
-}
-nav a:visited,
-a:link {
-    color: #334953;
-}
-nav a:hover {
-    color: #039be5;
-    background-color: #cfd8dc;
-}
-nav a.active {
-    color: #039be5;
+
+main {
+  font-family: "Montserrat";
+
+  nav {
+    a {
+      padding: $padding * 2 $padding * 4;
+      text-decoration: none;
+      margin-top: $margin * 1.5;
+      margin-right: $margin * 1.5;
+      display: inline-block;
+      border-radius: 6px;
+      font-size: 1.2em;
+      color: partial.color(primary-dark);
+      background-color: white;
+      border: 2px solid partial.color(primary-dark);
+    }
+    .active-menu {
+      color: white;
+      background-color: partial.color(primary-dark);
+    }
+
+    a:hover {
+      color: white;
+      background-color: partial.color(primary-dark);
+      border: 2px solid partial.color(bright-orange);
+    }
+    a:hover.active-menu {
+      color: white;
+      background-color: partial.color(primary-dark);
+      border: 2px solid partial.color(primary-dark);
+    }
+  }
 }
