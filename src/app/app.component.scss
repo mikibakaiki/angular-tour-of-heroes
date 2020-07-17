@@ -8,7 +8,7 @@ h1 {
   text-align: center;
 }
 
-main {
+main.principal {
   font-family: "Montserrat";
 
   nav {
@@ -24,7 +24,7 @@ main {
       background-color: white;
       border: 2px solid partial.color(primary-dark);
     }
-    .active-menu {
+    a.active-menu {
       color: white;
       background-color: partial.color(primary-dark);
     }
